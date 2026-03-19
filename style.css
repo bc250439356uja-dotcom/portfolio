@@ -1574,12 +1574,12 @@ button:focus {
     transform: translateY(0);
 }
 
-/* Mobile Reveal Optimization */
+/* Mobile Reveal Optimization - FIXED LAG */
 @media (max-width: 768px) {
     .reveal {
-        transform: translateY(15px); /* Shorter distance for mobile */
-        transition: all 0.6s cubic-bezier(0.2, 0.8, 0.2, 1); /* Faster for mobile */
-        filter: blur(4px); /* Subtler blur */
+        transform: translateY(10px); /* Minimal distance */
+        transition: all 0.4s cubic-bezier(0.2, 0.8, 0.2, 1); /* Much faster */
+        filter: none !important; /* Remove blur to prevent GPU lag */
     }
 }
 
